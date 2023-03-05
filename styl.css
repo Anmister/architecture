@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --gap:.6em;/*gap-это растояник =е между ячейками*/
+    --index: calc(1vw + 1vh);
+    --color-dark:#0000;/*это для темной темы*/
+}
+body{
+    overflow: hidden;/*убираем облосы прокрутки, свободное перемещение*/
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header{
+    text-transform: uppercase;/* стилизует текст с помощью заглавных букв.*/
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: .1em;
+    font-size: calc(var(--index) * 2.8);/*размер шрифта меняется под размер используемого устройства*/
+    position: absolute;
+    font-weight: 200;
+    text-align: center;
+    opacity: .9;
+    margin-top: .2em;
+}
+.header span{
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: calc(var(--index) * .75);
+    margin-top: 5px;
+}
+.gallery{
+    width: 30vw;/*уменьшим расположение картиеок. пусть занимеют 30% от ширины*/
+    column-width: 2em;/*расположение картинок в линию*/
+    gap: var(--gap);/*расстояние сежду колонками*/
+    transform: scale(8.2);
+   /* will-change: transform;
+    transition: transform 1s cubic-bezier(.075, 1, .25, 1), opacity 1s;*/
+}
+.gallery__item{
+    margin-bottom: var(--gap);/*расстояние между ячейками*/
+    transform: scale(1.001);
+   /* will-change: transform;
+    transition: .3s;*/
+
+}
+/*
+.gallery__item:hover{
+    transform: scale(1.03);*/
+
+.gallery__item img{
+    width: 100%;
+    display: block;
+}
+/*
+.loaded .gallery {
+    opacity: 1;
+    
+}*/
+
+
